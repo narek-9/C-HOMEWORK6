@@ -10,13 +10,15 @@ int[] array = Console.ReadLine().Split().Select(int.Parse).ToArray();
 int NumsMore0(int[] array)
 {
     int count = 0;
+
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i] > 0) count++;
     }
 
     return count;
+
 }
 
 Console.WriteLine($"Ваши числа: {String.Join(", ", array)}.");
-NumsMore0(array);
+Console.WriteLine($"Количество чисел больше 0 = {NumsMore0(array)}.");
